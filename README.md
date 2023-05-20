@@ -1,13 +1,20 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Pdl9reNB)
-# Homework_Assignment_12
+# Basket-Asian Option Pricing
+Overview: This repository contains an OOP implementation of basket-asian option pricing using Monte Carlo Simulation and operator overloading in C++.
 
-Please refer to Topic 10 Slide # 29 for the details of HW12. The followings are the inputs and outputs for HW12. Your outputs would be different, but should be around the outputs shown here.
+## Features:
+Basket-Asian option pricing: The code provides a comprehensive implementation of pricing basket of Asian options whose payoff depends on the entire path of the underlying asset. The assets are assumed to follow Geometric-Brownian motion. 
 
-Using the same inputs from the source codes for Topic 9. N=3000 and epsilon = 0.001.
+Monte Carlo Simulation: The option price is calculated using Monte Carlo Simulation, a widely used numerical method for pricing options.
 
-Outputs:
+## File Structure:
+Main.cpp: Contains the main method calling the Price by Monte Carlo to price Basket of Asian Options.
 
-Arithmetic Basket Call Price = 2.22962
-delta[0] = 0.50609
-delta[1] = 0.512323
-delta[2] = 0.530237
+MCModel02.h: Defines the Mone Carlo class, which encapsulates the necessary parameters and methods to generate sample paths which are used for simulation.
+
+PathDepOption02.h: Defines PathDepOption Class which encapsulates necessary methods to price path dependent options. Additionally, Path Dependent option acts as a parent class for Arithematic Asian options. Payoff is a virtual function which is inherited by Arithematic Asian Option class.
+
+Matrix.cpp: Defines operator overloading methods which are used to price the basket of Asian options. 
+
+Makefile: It defines a set of rules and dependencies for compiling and linking source code files, managing dependencies, and generating executable files or libraries.
+
+
